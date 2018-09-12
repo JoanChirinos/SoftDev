@@ -1,4 +1,4 @@
-# Joan Chirinos
+# Joan Chirinos, Soojin Choi
 # SoftDev1 pd08
 # K02 -- NO-body expects the Spanish Inquisition!
 # 2018-09-08
