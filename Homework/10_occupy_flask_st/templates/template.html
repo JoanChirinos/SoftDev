@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <style>
+      table, th, td {
+        padding: 5px;
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <p>Your occupation: <b>{{ random_occ }}</b></p>
+    <table>
+      <tr>
+        <th>Job Class</th>
+        <th>Percentage</th>
+        <th>Link</th>
+      </tr>
+      {% for occ in occs %}
+        <tr>
+          <td>
+            {{ occ }}
+          </td>
+          <td>
+            {{ occs[occ][0] }}
+          </td>
+          <td>
+            <a href="{{ occs[occ][1] }}" target="_blank">More info</a>
+          </td>
+        </tr>
+      {% endfor %}
+  </body>
+</html>
