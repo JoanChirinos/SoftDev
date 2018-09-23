@@ -1,6 +1,6 @@
 # Team StickyToes
 # Joan Chirinos, Johnny Wong
-# K10 --
+# K10 -- Jinja Tuning
 # 2018-09-21
 
 from flask import Flask, render_template
