@@ -10,9 +10,13 @@ def main():
     print(app)
     return render_template('mft.html')
 
-@app.route('/auth')
+@app.route('/auth', methods=['GET', 'POST'])
 def authenticate():
-    return render_template('out.html', name=request.args['username'], req_method=request.method)
+    rm = request.method
+    if rm == 'POST':
+        return render_template('out.html', name=request.form['username'], req_method=rm)
+    elif rm == 'GET':
+        return render_template('out.html', name=request.args['username'], req_method=rm)
 
 if __name__ == '__main__':
     app.debug = True

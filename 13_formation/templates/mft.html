@@ -6,9 +6,13 @@
 </head>
 
 <body>
-    <form action="/auth">
+    <form action="/auth" method="POST">
         <input type="text" name="username">
-        <input type="submit">
+        <input type="submit" name="POST" value="POST">
+    </form>
+    <form action="/auth" method="GET">
+        <input type="text" name="username">
+        <input type="submit" name="GET" value="GET">
     </form>
 </body>
 
