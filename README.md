@@ -1,2 +1,2 @@
 # SoftDev
-All of my SoftDev-related files will be here
+All of my SoftDev **homework** will be here
