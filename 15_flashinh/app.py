@@ -19,7 +19,8 @@ def login_screen():
 @app.route('/logout')
 def logout():
     session.pop('username')
-    return redirect('/')
+    flash('Successfully logged out!')
+    return redirect(url_for('login_screen'))
 
 # @app.route('/error')
 # def error(type):
@@ -50,12 +51,12 @@ def authenticate():
         session['username'] = username
         return redirect(url_for('welcome'))
     elif username not in d:
-        print("Username does not exist")
-        flash("Username does not exist")
+        print("Username does not exist!")
+        flash("Username does not exist!")
         return redirect(url_for('login_screen'))
     else:
-        print("Password incorrect")
-        flash("Password incorrect")
+        print("Password incorrect!")
+        flash("Password incorrect!")
         return redirect(url_for('login_screen'))
         #return error('Wrong password')
 
