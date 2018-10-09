@@ -34,7 +34,7 @@ with open('courses.csv', newline='\n') as courses:
     courseDictReader = csv.DictReader(courses)
 
     #Creates TABLE courses with name, mark, and id
-    c.execute("CREATE TABLE courses(name TEXT, mark INTEGER, id INTEGER);")
+    c.execute("CREATE TABLE courses(code TEXT, mark INTEGER, id INTEGER);")
 
     #Takes each course and inputs respective vals into TABLE peeps
     for each in courseDictReader:
