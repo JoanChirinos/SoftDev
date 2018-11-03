@@ -1,0 +1,46 @@
+body {
+    background-color: #777;
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #BBB;
+    color: white;
+    text-align: center;
+}
+
+li {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer,
+#col1,
+#col2 {
+    float: left;
+}
+
+#col1 {
+    width: 30%;
+}
+
+#col2 {
+    width: 70%;
+}
+
+.footer {
+    padding: 10px;
+    width: calc(100% - 20px);
+    background-color: #666;
+    color: #888;
+    text-align: right;
+}
