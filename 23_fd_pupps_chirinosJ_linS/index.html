@@ -1,0 +1,435 @@
+<!doctype html>
+<!--
+Team Pupps - Joan Chirinos, Susan Lin
+SoftDev pd08
+K23 -- How the Other Half Lives
+2018-11-12
+-->
+
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All About Foundation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <h1>
+                All About Foundation
+                <small>by Team Pupps</small>
+            </h1>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+            <div class="cell medium-2 medium-cell-block-y">
+                <div class="vertical menu">
+                    <li>
+                        <a href="#a1" class="main-menu-item bold">About</a>
+                    </li>
+                    <li>
+                        <a href="#a2" class="main-menu-item bold">Setup</a>
+                    </li>
+                    <li>
+                        <a href="#a3" class="main-menu-item bold">Features</a>
+                    </li>
+
+                    <ul class="nested vertical menu">
+                        <li>
+                            <a href="#b1" class="sub-menu-item">XY Grid</a>
+                        </li>
+                        <li>
+                            <a href="#b2" class="sub-menu-item">Typography</a>
+                        </li>
+                        <li>
+                            <a href="#b3" class="sub-menu-item">Navigation</a>
+                        </li>
+                        <li>
+                            <a href="#b4" class="sub-menu-item">Control</a>
+                        </li>
+                        <li>
+                            <a href="#b5" class="sub-menu-item">Containers</a>
+                        </li>
+                        <li>
+                            <a href="#b6" class="sub-menu-item">Media</a>
+                        </li>
+                    </ul>
+
+                    <li>
+                        <a href="#a4" class="main-menu-item bold">Resources</a>
+                    </li>
+                </div>
+            </div>
+
+            <div class="cell medium-10 medium-cell-block-y">
+                <h2 id="a1">About</h2>
+                <p>Foundation is one of many front-end frameworks you can use to build your website. You can access and modify a library of standardized CSS components, rather than building everything from scratch. This site showcases some of the most basic features of Foundation, with instructions to help you get started using it for your own projects. Some additional resources for more detailed documentation are included as well, once you've exhausted what we have on our site!</p>
+                <div class="callout primary" data-closable>
+                    <p class="bold">Before we get started, be sure to keep the source code handy!</p>
+                    <p>Each feature shown will include a reference to the specific lines in which it's implemented. <br>Right click and select <kbd>View page source</kbd> to open the source code in a new tab.</p>
+                    <button class="close-button" aria-label="Dimiss alert" type="button" data-close>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <hr>
+
+                <h2 id="a2">Setup</h2>
+                <p>The fastest way to start using the Foundation features showcased on this site is to simply add the CDN link into your HTML head section.</p>
+                <p>
+                    <code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css"&gt;</code>
+                </p>
+                <p>Alternatively, download the complete version <a href="https://foundation.zurb.com/sites/download/">here</a> for all the features available in the framework.</p>
+
+                <hr>
+
+                <h2 id="a3">Features</h2>
+                <hr>
+                <h3 id="b1">XY Grid</h3>
+                <p>An XY grid system is used in Foundation to separate a webpage into grids, and grids into cells and cell-blocks. In this site, the menu and content are separated into two y-cell blocks, and both blocks are contained in a grid-y. The heading is in a separate grid-x.</p>
+                <p class="bold">Refer to lines 96-140 for the source code of this grid.</p>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="large-8 medium-8 cell">
+                        <p>Here's a basic grid-x with 3 sections of 12 cells.</p>
+                    </div>
+                </div>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 cell">
+                        <div class="primary callout">
+                            <p>This is a 12 cell section.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="large-6 medium-6 cell">
+                        <div class="primary callout">
+                            <p>This is a 6 cell section.</p>
+                        </div>
+                    </div>
+                    <div class="large-6 medium-6 cell">
+                        <div class="primary callout">
+                            <p>This is a 6 cell section.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="large-4 medium-4 small-4 cell">
+                        <div class="primary callout">
+                            <p>This is a 4 cell section.</p>
+                        </div>
+                    </div>
+                    <div class="large-4 medium-4 small-4 cell">
+                        <div class="primary callout">
+                            <p>This is a 4 cell section.</p>
+                        </div>
+                    </div>
+                    <div class="large-4 medium-4 small-4 cell">
+                        <div class="primary callout">
+                            <p>This is a 4 cell section.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p>You can also control how many cells to display in each row, based on the screen size. In this grid, large screens display 6 cells per row, medium screens display 4 cells, and small screens display 2 cells. Try resizing your window to see how these cells shift!</p>
+                <p class="bold">Refer to lines 144-182</p>
+
+                <div class="grid-x grid-padding-x small-up-2 medium-up-4 large-up-6">
+                    <div class="cell">
+                        <div class="callout primary">cell</div>
+                    </div>
+                    <div class="cell">
+                        <div class="callout primary">cell</div>
+                    </div>
+                    <div class="cell">
+                        <div class="callout primary">cell</div>
+                    </div>
+                    <div class="cell">
+                        <div class="callout primary">cell</div>
+                    </div>
+                    <div class="cell">
+                        <div class="callout primary">cell</div>
+                    </div>
+                    <div class="cell">
+                        <div class="callout primary">cell</div>
+                    </div>
+                    <div class="cell">
+                        <div class="callout primary">cell</div>
+                    </div>
+                    <div class="cell">
+                        <div class="callout primary">cell</div>
+                    </div>
+                    <div class="cell">
+                        <div class="callout primary">cell</div>
+                    </div>
+                    <div class="cell">
+                        <div class="callout primary">cell</div>
+                    </div>
+                    <div class="cell">
+                        <div class="callout primary">cell</div>
+                    </div>
+                    <div class="cell">
+                        <div class="callout primary">cell</div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h3 id="b2">Typography</h3>
+                <p>Typography in Foundation gives you a set of simple default styles that look good together when building a rudimentary site. You can modify them to your own liking. Here's an example of some typographical features.</p>
+                <p class="bold">Refer to lines 189-226</p>
+
+                <div class="callout primary">
+                    <h1>Here are some headers</h1>
+                    <h2>Below is an ordered list.</h2>
+
+                    <ol>
+                        <li>Hello I am list</li>
+                        <li> Whoa!
+                            <ol>
+                                <li>I can</li>
+                                <li>be nested!</li>
+                            </ol>
+                        </li>
+                    </ol>
+
+                    <h4>Below is a definition list</h4>
+
+                    <dl>
+                        <dt>Life</dt>
+                        <dd>42</dd>
+                        <dt>Tomato</dt>
+                        <dd>A red fruit</dd>
+                    </dl>
+
+                    <hr>
+                    <h4>We can also use these pretty horizontal rules to divide stuff!</h4>
+                    <hr>
+
+                    <h5>Here's a block quote</h5>
+
+                    <blockquote>
+                        CS is cool!
+                        <cite>Everyone</cite>
+                    </blockquote>
+
+                    <h6>Typography is quite nifty!</h6>
+
+                </div>
+
+                <hr>
+
+                <h3 id="b3">Navigation</h3>
+                <p>These features let your users navigate smoothly from one page, or section of a page, to another.</p>
+                <p class="bold">Refer to lines 234-295</p>
+
+                <div class="callout primary">
+                    <div class="top-bar-right">
+                        <ul class="menu">
+                            <li>
+                                <input type="search" placeholder="Search">
+                            </li>
+                            <li>
+                                <button type="button" class="button">Search</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="large-4 medium-4 cell">
+                        <ul class="menu">
+                            <li class="is-active">
+                                <a href="#b3">Active one</a>
+                            </li>
+                            <li>
+                                <a href="#b3">Not active</a>
+                            </li>
+                            <li>
+                                <a href="#b3">Not active</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <ul class="pagination">
+                        <li class="pagination-previous disabled">
+                            Previous
+                            <span class="show-for-sr"> page</span>
+                        </li>
+
+                        <li class="current">
+                            <span class="show-for-sr">
+                                You're on page 
+                            </span> 1
+                        </li>
+
+                        <li>
+                            <a href="">2</a>
+                        </li>
+                        <li>
+                            <a href="">2</a>
+                        </li>
+                        <li>
+                            <a href="">3</a>
+                        </li>
+                        <li class="ellipsis"></li>
+                        <li>
+                            <a href="">12</a>
+                        </li>
+                        <li>
+                            <a href="">13</a>
+                        </li>
+
+                        <li class="pagination-next">
+                            <a href="">Next</a>
+                            <span class="show-for-sr"> page</span>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <hr>
+
+                <h3 id="b4">Control</h3>
+
+                <p>There are several types of buttons and controls available; some are linked, and others are for actions.</p>
+                <p class="bold">Refer to lines 304-337.</p>
+
+                <div class="callout primary">
+                    <a href="" class="button">Linkning Button</a>
+
+                    <button type="button" class="success button">Action Button</button>
+
+                    <a href="" class="button">You can put anything inside a button</a>
+
+                    <a href="" class="large button">You can also make larger ones</a>
+
+                    <a href="" class="large expanded button">And even larger ones!</a>
+
+                    <hr>
+
+                    <h5>You can also group buttons together</h5>
+
+                    <div class="button-group">
+                        <a class="button">This</a>
+                        <a class="button">is</a>
+                        <a class="button">a</a>
+                        <a class="button">basic</a>
+                        <a class="button">button</a>
+                        <a class="button">group</a>
+                    </div>
+
+                    <div class="expanded button-group">
+                        <a class="button">This</a>
+                        <a class="button">is</a>
+                        <a class="button">an</a>
+                        <a class="button">even-width</a>
+                        <a class="button">button</a>
+                        <a class="button">group</a>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <h3 id="b5">Containers</h3>
+
+                <p>There are different ways to separate content on your site to make it easier for viewing.</p>
+                <p class="bold">Refer to lines 346-377</p>
+
+                <div class="callout primary">
+                    <p>These funky boxes we've bee using are called callouts</p>
+                </div>
+
+                <div class="callout alert">
+                    <p>They come in different colors!</p>
+                </div>
+
+                <div class="grid-container">
+                    <div class="grid-x grid-padding-x small-up-2 medium-up-3">
+                        <div class="cell">
+                            <div class="card">
+                                <div class="card-section">
+                                    <img src="http://homer.stuy.edu/~jchirinos/thatcat.png">
+                                </div>
+                                <div class="card-section">
+                                    <p>This is a section of a card</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell">
+                            <div class="card">
+                                <div class="card-section">
+                                    <img src="http://homer.stuy.edu/~jchirinos/thatcat.png">
+                                </div>
+                                <div class="card-section">
+                                    <p>This is another card</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h3 id="b6">Media</h3>
+                <p>Here are some features for displaying media on your site.</p>
+                <p class="bold">Refer to lines 385-SOMETHING</p>
+
+                <div class="callout primary">
+                    <p>You can add progress bars on each page</p>
+                    <div class="secondary progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+                        <div class="progress-meter" style="width: 25%;"></div>
+                    </div>
+
+                    <div class="success progress">
+                        <div class="progress-meter" style="width: 50%;"></div>
+                    </div>
+
+                    <div class="warning progress">
+                        <div class="progress-meter" style="width: 50%;"></div>
+                    </div>
+
+                    <div class="alert progress">
+                        <div class="progress-meter" style="width: 75%;"></div>
+                    </div>
+
+                    <p>You can also add labels to emphasize an element</p>
+                    <span class="label primary">Primary label</span>
+                    <span class="label secondary">Secondary label</span>
+                    <span class="label success">Success label</span>
+                    <span class="label alert">Alert label</span>
+                    <span class="label warning">Warning label</span>
+
+                    <p>Finally, you can turn images into thumbnails</p>
+                    <img class="thumbnail" src="http://homer.stuy.edu/~jchirinos/thatcat.png">
+
+                </div>
+
+                <hr>
+
+                <h2 id="a4">Resources</h2>
+                <p>For more documentation, visit <a href="https://foundation.zurb.com/sites/docs/">Foundation's website.</a></p>
+
+                <hr>
+
+                <p class="bold">&copy; "Copyright" Joan Chirinos, Susan Lin 2018</p>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
