@@ -2,15 +2,17 @@
 <html>
 
 <head>
-    <title>REST Demo</title>
+  <title>REST Demo</title>
 </head>
 
 <body>
+  <center>
     <h1>{{ title }}</h1>
     <br>
-    <img src="{{ img_url }}">
+    {{ media | safe }}
     <br>
-    <p>{{ content }}</p>
+  </center>
+  <p>{{ content }}</p>
 </body>
 
 </html>
