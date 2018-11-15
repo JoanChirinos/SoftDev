@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>REST Demo</title>
+</head>
+
+<body>
+  <h1>World Population API</h1>
+
+  <h2>Countries</h2>
+  <p>This is a table of every country in the database</p>
+  <table border="1">
+    {% for country in countries %}
+    <tr>
+      <td>
+        {{ country }}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <hr>
+
+  <h2>World Population Rank</h2>
+  <p>The world population rank is defined as the position of someone's birthday among the group of living people of the same sex and country of origin, ordered by date of birth decreasing. The last person born is assigned rank #1.</p>
+  <p>This is the World Population Rank of a {{ wpr_sex }} living in {{ wpr_country }} born in {{ wpr_dob }}</p>
+  <p>RANK: {{ wpr_rank }}</p>
+
+  <hr>
+
+  <h2>Life Expectancy</h2>
+  <p>The total Life Expectancy of a person with given sex, country, and date of birth.</p>
+  <p>This is the Life Expectancy of a {{ le_sex }} living in {{ le_country }} born in {{ le_dob }}</p>
+  <p>LIFE EXPECTANCY: {{ le_le }}</p>
+
+  <hr>
+
+  <h2>Population</h2>
+  <p>These are the population stats for a specific age group in the given year and country.</p>
+  <table border="1">
+    {% for key, val in pop_dict.items() %}
+    <tr>
+      <td>
+        {{ key }}
+      </td>
+      <td>
+        {{ val }}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <hr>
+
+  <h2>Mortality</h2>
+  <p>This is the mortality distribution tables for a given country, sex and age.</p>
+  <p>Age: {{ m_age }} | Country: {{ m_country }} | Sex: {{ m_sex }}</p>
+  {% for d in mortality_list %}
+  <table border="1">
+    {% for key, val in d.items() %}
+    <tr>
+      <td>
+        {{ key }}
+      </td>
+      <td>
+        {{ val }}
+      </td>
+    </tr>
+  {% endfor %}
+  </table>
+  <br>
+  {% endfor %}
+
+</body>
+
+</html>
