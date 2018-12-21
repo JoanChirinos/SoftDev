@@ -9,33 +9,33 @@ K30 -- Sequential Progression III: Season of the Witch
 
 // PHASE III
 
-var changeHeading = function(e) {
+var changeHeading = function (e) {
     var h = document.getElementById("h");
     h.innerHTML = this.innerHTML;
 };
 
-var removeItem = function(e) {
+var removeItem = function (e) {
     this.remove();
 };
 
 var lis = document.getElementsByTagName("li");
 
-for(var i=0; i < lis.length; i++) {
+for (var i = 0; i < lis.length; i++) {
     lis[i].addEventListener('mouseover', changeHeading);
-    lis[i].addEventListener('mouseout', function(e){
-      document.getElementById("h").innerHTML = "Hello World!";
+    lis[i].addEventListener('mouseout', function (e) {
+        document.getElementById("h").innerHTML = "Hello World!";
     });
     lis[i].addEventListener('click', removeItem);
 };
 
 
-var addItem = function(e) {
+var addItem = function (e) {
     var list = document.getElementById("thelist");
     var item = document.createElement("li");
     item.innerHTML = "WORD";
     item.addEventListener('mouseover', changeHeading);
-    item.addEventListener('mouseout', function(e){
-      document.getElementById("h").innerHTML = "Hello World!";
+    item.addEventListener('mouseout', function (e) {
+        document.getElementById("h").innerHTML = "Hello World!";
     });
     item.addEventListener('click', removeItem);
     list.appendChild(item);
@@ -46,16 +46,16 @@ button.addEventListener('click', addItem);
 
 // PHASE IV
 
-var fib = function(n) {
-    if(n < 2){
+var fib = function (n) {
+    if (n < 2) {
         return 1;
     } else {
-        return fib(n-1) + fib(n-2);
+        return fib(n - 1) + fib(n - 2);
     }
 };
 
 
-var addFib = function(e){
+var addFib = function (e) {
     console.log(e);
     var fibList = document.getElementById("fiblist");
     var list = fiblist.getElementsByTagName("li");
@@ -70,11 +70,11 @@ var addFib = function(e){
 var fib2 = (n) => {
     // store first 2 fib nums
     var fibSeq = [0, 1];
-    if(n < 2) return (fibSeq[n]);
+    if (n < 2) return (fibSeq[n]);
 
     // swap first or second val of fibSeq with summation of prev two values
     var inc = 2;
-    while(inc <= n){
+    while (inc <= n) {
         fibSeq[inc % 2] = fibSeq[(inc + 1) % 2] + fibSeq[inc % 2];
         inc++;
     }
@@ -82,7 +82,7 @@ var fib2 = (n) => {
 };
 
 
-var addFib2 = function(e){
+var addFib2 = function (e) {
     console.log(e);
     // find fiblist
     var fibList = document.getElementById("fiblist");
@@ -97,3 +97,36 @@ var addFib2 = function(e){
 
 var fb = document.getElementById("fb");
 fb.addEventListener("click", addFib);
+
+// BEYOND!!!
+
+var addNameToList = function (e) {
+    document.getElementById('error_message').innerHTML = "";
+    var list = document.getElementById('name_list');
+    var name = document.getElementById('name');
+
+    if (name.value.trim() == '') {
+        document.getElementById('error_message').innerHTML = "Nani???";
+        return;
+    }
+    var item = document.createElement('li');
+    item.innerHTML = name.value;
+    item.addEventListener('click', removeItem);
+
+    list.appendChild(item);
+
+    name.value = "";
+};
+
+var nameButton = document.getElementById('add_name');
+nameButton.addEventListener('click', addNameToList);
+
+
+
+
+
+
+
+
+
+////
