@@ -52,11 +52,16 @@ var display_rs = () => {
 
 //eventListener
 
-var fib5 = document.getElementById('fib5');
-fib5.addEventListener('click', display_fib);
+var fib = document.getElementById('fib');
+fib.addEventListener('click', function() {
+  var in = document.getElementById('fib_input');
+  document.getElementById('fib_results').innerHTML = fibonacci(in);
+});
 
-var gcd159 = document.getElementById('gcd159');
-gcd159.addEventListener('click', display_gcd);
+var gcd = document.getElementById('gcd');
+gcd.addEventListener('click', function() {
+  var in_one = 
+});
 
 var rs = document.getElementById('randomstudent');
 rs.addEventListener('click', display_rs);
